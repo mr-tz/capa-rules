@@ -24,6 +24,7 @@ jobs:
     env:
       # expect this text in the PR body to trigger thorough lint of all rules
       LINT_THOROUGH: '[x] lint thorough all'
+      INPUT_THOROUGH: {{ inputs.thorough }}
     steps:
     # We check the submodules separately as the rules submodule's reference may not be our PR/master
     - name: Checkout capa without submodules
